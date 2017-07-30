@@ -1,16 +1,25 @@
 /**
  * Copyright (C) 2017 Baidu, Inc. All Rights Reserved.
  */
-package com.baidubce.services.vcr.model;
+package com.baidubce.services.vca.model;
 
 /**
- * Vcr error.
+ * Vca error.
  *
- * @author dingshenglong
+ * @author houshunwei
  */
-public class VcrError {
+public class VcaError {
     private String code;
     private String message;
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("VcaError{");
+        sb.append("code='").append(code).append('\'');
+        sb.append(", message='").append(message).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
 
     public String getCode() {
         return code;
@@ -26,14 +35,5 @@ public class VcrError {
 
     public void setMessage(String message) {
         this.message = message;
-    }
-
-    @Override
-    public String toString() {
-        final StringBuilder sb = new StringBuilder("VcaError{");
-        sb.append("code='").append(code).append('\'');
-        sb.append(", message='").append(message).append('\'');
-        sb.append('}');
-        return sb.toString();
     }
 }
